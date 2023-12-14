@@ -1,0 +1,94 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "netcallrelay": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://q7kbpb37yje7vo2jaexz6n53gi.appsync-api.us-east-2.amazonaws.com/graphql",
+                    "region": "us-east-2",
+                    "authorizationType": "AWS_IAM",
+                    "apiKey": "da2-w2fmqbmmazemrf6quqdtpdg2sa"
+                }
+            }
+        }
+    },
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "UserAgent": "aws-amplify-cli/0.1.0",
+                "Version": "0.1.0",
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "AppSync": {
+                    "Default": {
+                        "ApiUrl": "https://q7kbpb37yje7vo2jaexz6n53gi.appsync-api.us-east-2.amazonaws.com/graphql",
+                        "Region": "us-east-2",
+                        "AuthMode": "AWS_IAM",
+                        "ClientDatabasePrefix": "netcallrelay_AWS_IAM"
+                    },
+                    "netcallrelay_API_KEY": {
+                        "ApiUrl": "https://q7kbpb37yje7vo2jaexz6n53gi.appsync-api.us-east-2.amazonaws.com/graphql",
+                        "Region": "us-east-2",
+                        "AuthMode": "API_KEY",
+                        "ApiKey": "da2-w2fmqbmmazemrf6quqdtpdg2sa",
+                        "ClientDatabasePrefix": "netcallrelay_API_KEY"
+                    }
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "us-east-2:7f4df3bc-8c7b-4532-8df2-75cc0fadd58f",
+                            "Region": "us-east-2"
+                        }
+                    }
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "us-east-2_NHrIAFZYW",
+                        "AppClientId": "3jdv21pm0eu6cju48d9rogqgsb",
+                        "Region": "us-east-2"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "authenticationFlowType": "USER_SRP_AUTH",
+                        "mfaConfiguration": "OFF",
+                        "mfaTypes": [
+                            "SMS"
+                        ],
+                        "passwordProtectionSettings": {
+                            "passwordPolicyMinLength": 8,
+                            "passwordPolicyCharacters": []
+                        },
+                        "signupAttributes": [
+                            "EMAIL"
+                        ],
+                        "socialProviders": [],
+                        "usernameAttributes": [
+                            "EMAIL"
+                        ],
+                        "verificationMechanisms": [
+                            "EMAIL"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "geo": {
+        "plugins": {
+            "awsLocationGeoPlugin": {
+                "region": "us-east-2",
+                "searchIndices": {
+                    "items": [
+                        "ncrelayplaceidx-dev"
+                    ],
+                    "default": "ncrelayplaceidx-dev"
+                }
+            }
+        }
+    }
+}

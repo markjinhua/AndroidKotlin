@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <EditText android:id="@+id/sipAddress" android:layout_width="wrap_content" android:layout_height="150px" android:text="Address" android:hint="SIP Address" android:ems="10" android:inputType="textPersonName"/>
+        <EditText android:id="@+id/sipHost" android:layout_width="match_parent" android:layout_height="150px" android:text="Host:Port" android:hint="SIP Host (with port)" android:ems="10" android:inputType="textPersonName"/>
+        <EditText android:id="@+id/sipPassword" android:layout_width="match_parent" android:layout_height="150px" android:text="Password" android:hint="SIP Password" android:ems="10" android:inputType="text"/>
+        <EditText android:id="@+id/targetPhoneNumber" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="150px" android:hint="Target PSTN Number" android:ems="10" android:inputType="phone"/>
+        <Button android:id="@+id/startRelayButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Start Relay"/>
+        <Switch android:id="@+id/callerIdSwitch" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="60dp" android:minHeight="48dp" android:text="Hide Caller ID"/>        
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
